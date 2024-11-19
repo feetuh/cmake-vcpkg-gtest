@@ -6,8 +6,8 @@ project(example-vcTests LANGUAGES CXX)
 
 # ---- Dependencies ----
 
-find_package(Catch2 REQUIRED)
-include(Catch)
+enable_testing()
+find_package(GTest CONFIG REQUIRED)
 
 # ---- Tests ----
 
@@ -15,11 +15,13 @@ add_executable(example-vc_test source/example-vc_test.cpp)
 target_link_libraries(
     example-vc_test PRIVATE
     example-vc_lib
-    Catch2::Catch2WithMain
+    GTest::gmock_main
 )
-target_compile_features(example-vc_test PRIVATE cxx_std_20)
+target_compile_features(example-vc_test PRIVATE cxx_std_26)
 
-catch_discover_tests(example-vc_test)
+include(GoogleTest)
+
+add_test(ExampleTests example-vc_test)
 
 # ---- End-of-file commands ----
 

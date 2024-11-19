@@ -28,9 +28,6 @@ target_include_directories(
 
 target_compile_features(example-vc_lib PUBLIC cxx_std_26)
 
-find_package(fmt REQUIRED)
-target_link_libraries(example-vc_lib PRIVATE fmt::fmt)
-
 # ---- Declare executable ----
 
 add_executable(example-vc_exe source/main.cpp)

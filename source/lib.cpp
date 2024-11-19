@@ -1,8 +1,8 @@
 #include "lib.hpp"
 
-#include <fmt/format.h>
+#include <format>
 
 library::library()
-    : name {fmt::format("{}", "example-vc")}
+    : name {std::format("{}", "example-vc")}
 {
 }

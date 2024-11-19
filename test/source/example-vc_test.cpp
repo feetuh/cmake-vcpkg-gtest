@@ -1,9 +1,10 @@
-#include <catch2/catch_test_macros.hpp>
+#include <gtest/gtest.h>
 
 #include "lib.hpp"
 
-TEST_CASE("Name is example-vc", "[library]")
+TEST(ExampleTest, simpleTest)
 {
   auto const lib = library {};
-  REQUIRE(lib.name == "example-vc");
+  ASSERT_EQ(lib.name, "example-vc");
 }
+
