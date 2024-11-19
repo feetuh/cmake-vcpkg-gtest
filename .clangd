@@ -1,0 +1,6 @@
+CompileFlags:
+  CompilationDatabase: build/dev
+Diagnostics:
+  ClangTidy:
+    Remove: boost-use-ranges
+
