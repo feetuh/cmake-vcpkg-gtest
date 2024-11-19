@@ -17,20 +17,20 @@ include(cmake/variables.cmake)
 
 add_library(
     example-vc_lib OBJECT
-    source/lib.cpp
+    src/example/lib.cpp
 )
 
 target_include_directories(
     example-vc_lib ${warning_guard}
     PUBLIC
-    "\$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/source>"
+    "\$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>"
 )
 
 target_compile_features(example-vc_lib PUBLIC cxx_std_26)
 
 # ---- Declare executable ----
 
-add_executable(example-vc_exe source/main.cpp)
+add_executable(example-vc_exe src/main.cpp)
 add_executable(example-vc::exe ALIAS example-vc_exe)
 
 set_property(TARGET example-vc_exe PROPERTY OUTPUT_NAME example-vc)

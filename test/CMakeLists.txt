@@ -11,7 +11,7 @@ find_package(GTest CONFIG REQUIRED)
 
 # ---- Tests ----
 
-add_executable(example-vc_test source/example-vc_test.cpp)
+add_executable(example-vc_test src/example-vc_test.cpp)
 target_link_libraries(
     example-vc_test PRIVATE
     example-vc_lib

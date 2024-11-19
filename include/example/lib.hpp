@@ -2,6 +2,8 @@
 
 #include <string>
 
+namespace example {
+
 /**
  * @brief The core implementation of the executable
  *
@@ -19,3 +21,6 @@ struct library
 
   std::string name;
 };
+
+} // namespace example
+

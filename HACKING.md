@@ -105,6 +105,10 @@ to setup `PATH` to run tests.
 
 [vcpkg]: https://github.com/microsoft/vcpkg
 
+```sh
+vcpkg install
+```
+
 ### Configure, build and test
 
 If you followed the above instructions, then you can configure, build and test

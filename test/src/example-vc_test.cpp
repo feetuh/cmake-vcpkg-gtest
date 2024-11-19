@@ -1,10 +1,10 @@
 #include <gtest/gtest.h>
 
-#include "lib.hpp"
+#include "example/lib.hpp"
 
 TEST(ExampleTest, simpleTest)
 {
-  auto const lib = library {};
+  auto const lib = example::library {};
   ASSERT_EQ(lib.name, "example-vc");
 }
 
