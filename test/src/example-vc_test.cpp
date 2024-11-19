@@ -7,4 +7,3 @@ TEST(ExampleTest, simpleTest)
   auto const lib = example::library {};
   ASSERT_EQ(lib.name, "example-vc");
 }
-
